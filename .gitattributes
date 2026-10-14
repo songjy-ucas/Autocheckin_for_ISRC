@@ -1,0 +1,13 @@
+# Keep repository text files consistent across Windows, macOS, and Linux.
+* text=auto eol=lf
+
+# Windows command scripts should use native CRLF line endings.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Treat credential and image formats as binary if they are added later.
+*.bin binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary

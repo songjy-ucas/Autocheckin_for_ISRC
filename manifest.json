@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "ISRC LLM API 每日签到",
+  "version": "1.0.0",
+  "description": "为 llmapi.isrc.ac.cn 自动完成每日签到，不保存账号、密码、Cookie 或访问令牌。",
+  "permissions": [
+    "alarms",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://llmapi.isrc.ac.cn/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "ISRC LLM API 每日签到",
+    "default_popup": "popup.html"
+  }
+}

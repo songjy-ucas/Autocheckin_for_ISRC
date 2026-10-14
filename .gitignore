@@ -1,0 +1,7 @@
+.credential.bin
+__pycache__/
+*.pyc
+checkin.log
+
+# Personal notes; keep locally and do not publish.
+readme_forme.md

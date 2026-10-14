@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ISRC 每日签到</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="logo" aria-hidden="true">✓</div>
+        <div>
+          <h1>每日签到</h1>
+          <p>llmapi.isrc.ac.cn</p>
+        </div>
+      </header>
+
+      <section id="statusCard" class="status-card neutral" aria-live="polite">
+        <span id="statusDot" class="status-dot"></span>
+        <div>
+          <strong id="statusTitle">正在读取状态…</strong>
+          <p id="statusMessage">请稍候</p>
+          <time id="statusTime"></time>
+        </div>
+      </section>
+
+      <button id="checkinButton" class="primary" type="button">
+        <span id="buttonText">立即签到</span>
+      </button>
+
+      <section class="settings">
+        <label class="switch-row" for="enabled">
+          <span>
+            <strong>自动签到</strong>
+            <small id="nextRun">每天自动执行</small>
+          </span>
+          <input id="enabled" type="checkbox" />
+          <span class="switch" aria-hidden="true"></span>
+        </label>
+
+        <div class="time-row">
+          <label for="hour">执行时间</label>
+          <div class="time-inputs">
+            <input id="hour" type="number" min="0" max="23" inputmode="numeric" />
+            <span>:</span>
+            <input id="minute" type="number" min="0" max="59" inputmode="numeric" />
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <button id="openProfile" class="link-button" type="button">打开个人资料页</button>
+        <span>凭据只保留在网站中</span>
+      </footer>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
